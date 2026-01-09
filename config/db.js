@@ -1,8 +1,8 @@
 const mongoose =require("mongoose")
 
-const dbconnection = () => {
+const dbconnection = async () => {
   try {
-    mongoose.connect(process.env.MONGO_URI);
+   await mongoose.connect(process.env.MONGO_URI);
 
     console.log("db connected successfully");
   } catch (error) {
